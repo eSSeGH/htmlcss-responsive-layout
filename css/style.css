@@ -57,7 +57,7 @@ a {
     flex-basis: calc(100%/3);
 }
 
-.col-2 {
+.col-6 {
     flex-basis: calc(100%*2/3);
 }
 
@@ -105,7 +105,7 @@ a {
     }
 }
 
-/* HERO */
+/* FEATURES */
 
 .card {
     background-color: var(--lightblue);
@@ -115,7 +115,7 @@ a {
     min-height: 200px;
 }
 
-/* MEDIAUERY HERO */
+/* MEDIAUERY FEATURES */
 
 @media only screen and (max-width: 575px) {
     .hero [class^="col-"] {
