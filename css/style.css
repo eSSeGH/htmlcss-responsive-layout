@@ -7,6 +7,7 @@
 html {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 13px;
+    line-height: 32px;
 }
 
 img {
@@ -22,6 +23,7 @@ img {
     --dark: #333333;
     --yellow: #FDC15F;
     --grey: #7F9BB3;
+    --gap: 24px;
 }
 
 ul,
@@ -44,6 +46,12 @@ a {
     margin: 0 auto;
 }
 
+.container2 {
+    max-width: 875px;
+    width: 70.6%;
+    margin: 0 auto;
+}
+
 /* ROW */
 
 .flex {
@@ -63,6 +71,10 @@ a {
 
 .col-6 {
     flex-basis: calc(100%*2/3);
+}
+
+.col-50 {
+    flex-basis: calc(100%/2);
 }
 
 /* BUTTONS & ICONS */
@@ -92,6 +104,15 @@ a {
     margin-bottom: 32px;
 }
 
+.icon--purple {
+    background-color: var(--purple);
+    color: black;
+    font-size:  20px;
+    margin: 32px 0;
+    line-height: 32px;
+    padding: 0 16px;
+}
+
 /* TITLES */
 
 h1 {
@@ -99,7 +120,8 @@ h1 {
 }
 
 h2 {
-
+    font-size: 32px;
+    margin-bottom: 55px;
 }
 
 h3 {
@@ -131,7 +153,7 @@ h3 {
 
 /* MEDIAUERY HEADER */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
     .hamburger {
         display: block;
     }
@@ -149,16 +171,16 @@ h3 {
 }
 
 .features .row:first-child {
-    gap: 24px;
+    gap: var(--gap);
 }
 
 .features .col-3 {
-    flex-basis: calc(100%/3 - 48px/3);
+    flex-basis: calc(100%/3 - 2*var(--gap)/3);
     text-align: center;
 }
 
 .features .col-6 {
-    flex-basis: calc(100%*2/3 - (12px - (48px/3 - 12px)));
+    flex-basis: calc(100%*2/3 - (var(--gap) /2 - (2*var(--gap)/3 - var(--gap)/2)));
 }
 
 .card {
@@ -189,6 +211,7 @@ h3 {
 .card-figure img {
     aspect-ratio: 200/250 ;
     margin-bottom: -24px;
+    
 }
 
 .card-figure {
@@ -196,16 +219,21 @@ h3 {
     align-items: flex-end;
 }
 
+.card-figure>figure {
+    width: 70%;
+    margin-top: 24px;
+}
+
 
 /* MEDIAUERY FEATURES */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 575px) {
     .features [class^="col-"] {
         flex-basis: calc(100%);
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
     .col-6>.card {
         flex-wrap: wrap;
     }
@@ -231,6 +259,45 @@ h3 {
         font-size: 70px;
     }
 }
+
+/* PLANNING */
+
+.planning {
+    background-color: var(--purple);
+    padding-top: 130px;
+    padding-bottom: 65px;
+}
+
+.planning-left {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.planning-left-text {
+    color: white;;
+}
+
+.planning-right.card {
+    background-color: white;
+    margin-top: 175px;
+    text-align: center;
+    height: auto; 
+}
+
+.planning .row {
+    gap: 65px;
+}
+
+.planning .col-50 {
+    flex-basis: calc(100%/2 - 65px/2);
+}
+
+.planning-right>.icon--purple {
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/* MEDIAUERY PLANNING */
 
 
 
