@@ -299,7 +299,30 @@ h3 {
 
 /* MEDIAUERY PLANNING */
 
+@media only screen and (max-width: 991px) {
+    .container2 {
+        max-width: 1140px;
+        width: 92%;
+        margin: 0 auto;
+    }
 
+    .planning .row {
+        flex-wrap: wrap;
+    }
+
+    .planning .col-50 {
+        flex-basis: 100%;
+    }
+
+    .planning-right.card {
+        margin-top: 0; 
+    }
+
+    .planning h2 {
+        margin-top: 175px;
+    }
+
+}
 
 
 
