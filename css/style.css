@@ -77,6 +77,14 @@ a {
     flex-basis: calc(100%/2);
 }
 
+.col-fixed {
+    width: 230px;
+}
+
+.col-grow {
+    flex-grow: 1;
+}
+
 /* BUTTONS & ICONS */
 
 .button {
@@ -113,10 +121,11 @@ a {
     padding: 0 16px;
 }
 
-/* TITLES */
+/* TITLES & TEXTS */
 
 h1 {
-
+    font-size: 45px;
+    margin-bottom: 44px;
 }
 
 h2 {
@@ -127,6 +136,10 @@ h2 {
 h3 {
     font-size: 24px;
     margin-bottom: 38px;
+}
+
+p {
+    margin-bottom: 30px;
 }
 
 /* HEADER */
@@ -323,6 +336,75 @@ h3 {
     }
 
 }
+
+/* TESTIMONIALS */
+
+.testimonial-header {
+    text-align: center;
+    padding-top: 65px;
+}
+
+.testimonial-header span {
+   margin-bottom: 44px;
+}
+
+.testimonial h1 {
+    color: var(--purple);
+}
+
+.testimonial h3 {
+    margin-bottom: 0;
+}
+
+.testimonial p {
+    font-size: 18px;
+}
+
+.testimonial-card {
+    background-color: var(--purple);
+    border-radius: 30px;
+    color: white;
+    flex-wrap: nowrap;
+}
+
+.testimonial .row {
+    gap: 35px;
+}
+
+.testimonial .col-fixed {
+    align-items: center;
+    padding: 35px 15px;
+}
+
+.testimonial .col-grow {
+    padding: 40px;
+}
+
+.testimonial-img img {
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 200px;
+}
+  
+/* MEDIAUERY TESTIMONIALS */
+
+@media only screen and (max-width: 575px) {
+    .testimonial-card {
+        flex-direction: column;
+    }
+
+    .testimonial-card>.col-fixed {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .testimonial h1 {
+        line-height:  50px;;
+    }
+}
+
+
 
 
 
